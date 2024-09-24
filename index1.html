@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cart</title>
+    <style>
+        .image{
+            width: 20vw;
+            height: 20vh;
+            padding: 2vw;
+        }
+        .container{
+            border: 2px solid;
+            width: 70vw;
+        }
+        #div1{
+            display: flex;
+        }
+        #nagpur{
+            font-weight: lighter;
+        }
+       #div2{
+            display: flex;
+            align-items: center;
+            /* justify-content: space-between; */
+            gap: 2vw;
+       }
+       #span3{
+            display: inline-block;
+            
+       }
+       #inDiv{
+            border: 1px solid grey;
+            margin-left: 30vw;
+            display: flex;
+            gap: 2vw;
+       }
+       span{
+            padding: 0.5vw;
+        }
+       #span3,#span1{
+            color: rgb(7, 204, 7);
+       }
+       #p1{
+            margin-left: 5vw;
+       }
+       #div3{
+            background-color: lightgray;
+            width: 70vw;
+            height: 10vh;
+            position: relative;
+            margin: auto;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            text-align: center;
+            border-radius:4%;
+            margin-bottom: 5vw;
+       }
+       #div4{
+        border: 1px solid;
+            position: relative;
+            margin: auto;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            text-align: center;
+            width: 70vw;
+            
+       }
+       #amount{
+            margin-left: 53vw ;
+       }
+       #fee{
+        margin-left: 49vw;
+       }
+       #tip{
+            margin-left: 50vw;
+       }
+       #platform{
+            margin-left: 52.5vw;
+       }
+       #gst{
+            margin-left: 46vw;
+       }
+       #totalall{
+            margin-left: 54.5vw;
+       }
+       #h36{
+        font-weight: bolder;
+       }
+    </style>
+</head>
+<body>
+    <script>
+        let container = document.createElement('div');
+        container.className = 'container';
+        let image = document.createElement('img');
+        image.className = 'image';
+        image.setAttribute('src','https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/ef879a99e9a2d7d231c5d02f2d0fef29');
+        let div1 = document.createElement('div');
+        div1.id = 'div1';
+        let div2 = document.createElement('div');
+        div2.id = 'div2';
+        let div3 = document.createElement('div');
+        div3.id = 'div3';
+        let div4 = document.createElement('div');
+        div4.id = 'div4';
+        let div5 = document.createElement('div');
+        div5.id = 'div5';
+        let div6 = document.createElement('div');
+        div6.id = 'div6';
+        let div7 = document.createElement('div');
+        div7.id = 'div7';
+        let h1 = document.createElement('h1');
+        h1.id = 'h1-0';
+        let icon = document.createElement('img');
+        icon.id = 'icon'
+        let h3 = document.createElement('h3');
+        h3.id = 'div-h3';
+        let inDiv = document.createElement('div')
+        inDiv.id = 'inDiv';
+        let span1 = document.createElement('span');
+        span1.id = 'span1';
+        let span2 = document.createElement('span');
+        span2.id = 'span2';
+        let span3 = document.createElement('span');
+        span3.id = 'span3';
+        let p1 = document.createElement('p');
+        p1.id = 'p1';
+        let h31 = document.createElement('h3');
+        h31.className = 'h31';
+        let total = document.createElement('span');
+        total.className = 'total';
+        let amount = document.createElement('span');
+        amount.id = 'amount';
+        let h32 = document.createElement('span');
+        h32.className = 'h32';
+        let fee = document.createElement('span');
+        fee.id = 'fee';
+        let h33 = document.createElement('span');
+        h32.className = 'h33';
+        let tip = document.createElement('span');
+        tip.id = 'tip';
+        let h34 = document.createElement('span');
+        h34.className = 'h34';
+        let platform = document.createElement('span');
+        platform.id = 'platform';
+        let h35 = document.createElement('span');
+        h35.className = 'h35';
+        let gst = document.createElement('span');
+        gst.id = 'gst';
+        let h36 = document.createElement('span');
+        h36.id = 'h36';
+        let totalall = document.createElement('span');
+        totalall.id = 'totalall';
+        h1.innerHTML = 'Champaran Handi Resturant <br> <span id=nagpur>Nagpur road</span>';
+        icon.setAttribute('src','./veg.png')
+        h3.innerHTML = "Aloo Jeera";
+        span1.innerHTML = "-";
+        span1.setAttribute('onclick','MathDec()');
+        span2.innerHTML = '0';
+        span3.innerHTML = '+';
+        span3.setAttribute('onclick','MathInc()');
+        p1.innerHTML = '0';
+        div3.innerHTML = "'Any suggestions? we will pass it on...'";
+        div4.innerHTML = '<input type=checkbox id=check><label><b>Opt in for No-contact delivery</b> <br> unwell, or avoiding contact ? please <br> select no contact delivery.Partner will <br> safety place the order outside your <br> door(not for COD)</label>';
+        h31.innerHTML = 'Bill details'; 
+        total.innerHTML = 'Item Total';
+        amount.innerHTML = '0';
+        h32.innerHTML = "<br>Delivery partner fee ";
+        fee.innerHTML = '74';
+        h33.innerHTML = "<br>Delivery Tip ";
+        tip.innerHTML = 'Add tip';
+        h34.innerHTML = "<br>Platform fee ";
+        platform.innerHTML = '6';
+        h35.innerHTML = "<br>GST and Resturant Charges ";
+        gst.innerHTML = '0';
+        h36.innerHTML = 'To pay';
+        totalall.innerHTML = '0';
+        container.appendChild(div1);
+        container.appendChild(div2);
+        container.appendChild(div3);
+        container.appendChild(div4);
+        container.appendChild(div5);
+        container.appendChild(div6);
+        container.appendChild(div7);
+        div1.appendChild(image);
+        div1.appendChild(h1);
+        div2.appendChild(icon)
+        div2.appendChild(h3);
+        div2.appendChild(inDiv);
+        inDiv.append(span1);
+        inDiv.appendChild(span2);
+        inDiv.appendChild(span3);
+        div2.appendChild(p1);
+        div5.appendChild(h31);
+        div5.appendChild(total);
+        div5.appendChild(amount);
+        div5.appendChild(h32);
+        div5.appendChild(fee);
+        div6.appendChild(h33);
+        div6.appendChild(tip);
+        div6.appendChild(h34);
+        div6.appendChild(platform);
+        div6.appendChild(h35);
+        div6.appendChild(gst);
+        div7.appendChild(h36);
+        div7.appendChild(totalall);
+        document.body.appendChild(container);
+        
+        function MathInc(){
+            let inc = document.getElementById('span2');
+            inc.innerHTML = Number(inc.innerHTML)+1;
+            let value = document.getElementById('p1');
+            value.innerHTML = Number(155)+Number(value.innerHTML);
+            let amount1 = document.getElementById('amount');
+            amount.innerHTML = Number(155)+Number(amount.innerHTML);
+            let tax = document.getElementById('gst');
+            e = (Number(amount.innerHTML)*(0.18));
+            tax.innerHTML = e.toFixed(2);
+            let totalAmount = Number(amount.innerHTML) + Number(fee.innerHTML) + Number(platform.innerHTML) + Number(tax.innerHTML);
+            document.getElementById('totalall').innerHTML = totalAmount;
+        }
+        
+        function MathDec(){
+            let dec = document.getElementById('span2');
+
+           let x= Number(dec.innerHTML)-1;
+            // if(dec.innerHTML == 0){
+            //     let dis = document.getElementById('span1');
+            //     span1.setAttribute('disabled','true');
+            //     // dec.setAttribute('disabled','true')
+            //     // dec.style.display = 'none';
+            //     // dec.remove();
+            // }
+
+            if(x <= 0){
+               dec.innerHTML=0
+            }
+            else{
+                dec.innerHTML=x
+            }
+            let value1 = document.getElementById('p1');
+            y = value1.innerHTML - Number(155);
+            if(y <=0){
+                value1.innerHTML = 0;
+            }
+            else{
+                value1.innerHTML = y;
+            }
+            let amount2 = document.getElementById('amount');
+            let b = amount2.innerHTML - Number(155);
+            if(b <=0){
+                amount2.innerHTML=0;
+            }
+            else{
+                amount2.innerHTML=b;
+            }
+            let tax = document.getElementById('gst')
+            let g = (Number(amount.innerHTML)*(0.18));
+            console.log(g.innerHTML);
+            if(g<=0){
+                tax.innerHTML = 0;
+            }
+            else{
+                tax.innerHTML = g;
+            }
+            let totalAmount = Number(amount.innerHTML) + Number(fee.innerHTML) + Number(platform.innerHTML) + Number(tax.innerHTML);
+            document.getElementById('totalall').innerHTML = totalAmount;
+            
+        }
+    </script>
+</body>
+</html>
